@@ -27,4 +27,28 @@ $cep = $_POST['cep'] . $_POST['cep2'];
 $veiculo = $_POST['veiculo'];
 $placa = $_POST['placa'];
 $ano_veiculo = $_POST['ano_veiculo'];
+// Processando o upload de imagem
+if ($_FILES['imagem']['name']) {
+    $imagem_nome = $_FILES['imagem']['name'];
+    $imagem_tmp = $_FILES['imagem']['tmp_name'];
+    $imagem_destino = "uploads/" . $imagem_nome;
+    move_uploaded_file($imagem_tmp, $imagem_destino);
+} else {
+    $imagem_destino = null; // Caso não haja imagem
+}
+
+// Inserindo os dados no banco de dados
+$sql = "INSERT INTO entregadores (nome, sobrenome, imagem, nascimento, rg, cpf, rua, numero, bairro, estado, cidade, cep, veiculo, placa, ano_veiculo) 
+        VALUES ('$nome', '$sobrenome', '$imagem_destino', '$nascimento', '$rg', '$cpf', '$rua', '$numero', '$bairro', '$estado', '$cidade', '$cep', '$veiculo', '$placa', '$ano_veiculo')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Cadastro realizado com sucesso!";
+} else {
+    echo "Erro ao cadastrar: " . $conn->error;
+}
+
+// Fechando a conexão
+$conn->close();
+?>
+
 ?>
