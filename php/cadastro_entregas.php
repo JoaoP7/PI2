@@ -31,6 +31,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Preparando a consulta SQL para inserção
     $sql = "INSERT INTO entregas (nome_cliente, numero_pedido, data_entrega, hora, valor, entregador, veiculo, placa, ano_veiculo, modelo_veiculo)
             VALUES ('$nome_cliente', '$numero_pedido', '$data_entrega', '$hora', '$valor', '$entregador', '$veiculo', '$placa', '$ano_veiculo', '$modelo_veiculo')";
-
     
+    // Executando a consulta
+    if ($conn->query($sql) === TRUE) {
+        echo "Novo registro criado com sucesso!";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Fechando a conexão
+$conn->close();
+?>
+
 ?>
