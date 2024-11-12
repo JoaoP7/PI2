@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 // Recebendo os dados do formulário
 $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
 $sobrenome = $_POST['sobrenome'];
-$imagem = isset($_POST['imagem']) ? $_POST['imagem'] : '';  
+$imagem = isset($_POST['imagem'])  $_POST['imagem'] : '';  
 $dia = $_POST['dia'];
 $mes = $_POST['mes'];
 $ano = $_POST['ano'];
@@ -29,5 +29,5 @@ $cidade = $_POST['cidade'];
 $cep = $_POST['cep'] . $_POST['cep2'];
 $veiculo =  isset($_POST['veiculo']) ? $_POST['veiculo'] : '' ;
 $placa =  isset($_POST['placa']) ? $_POST['placa'] : '';
-$ano_veiculo = isset($_POST['ano_veiculo']) ? $_POST['ano_veiculo'] : '2000';
+$ano_veiculo = isset($_POST['ano_veiculo']) ? $_POST['ano_veiculo'] : '';
 ?>
