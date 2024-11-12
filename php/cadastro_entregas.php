@@ -1,6 +1,6 @@
 <?php
 // Dados de conexão com o banco de dados
-$servername = "127.0.0.1"; 
+$servername = "127.0.1.1"; 
 $username = "root"; 
 $password = "Root"; 
 $banco = "entregas"; 
