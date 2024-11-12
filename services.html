@@ -22,7 +22,107 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
-      <!-- el>
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+	  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">  
+  </head>
+   <body>
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="logo"><a href="https://www.univesp.br" target="_blank"><img src="./images/logo-home.png"></a><a href="index.html"><img src="images/logo.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+						<a href="https://www.facebook.com/bortos.dogs?mibextid=kFxxJD" target="_blank"><img src="./images/facebook-icons.png"></a>
+						<a href="https://www.instagram.com/bortos.dogs?igsh=cXJjbmp6Z3o1Z2p3" target="_blank"><img src="./images/instagram-icons.png"></a>                     
+					 <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="employee.html">Cadastro</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="services.html">Entregas</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nós</a>
+                     </li>					 
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contato</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!--header section end -->
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="services_section02 layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="services_taital">Cadastro de Entregas</h1>
+                  <p class="services_text">Dados de cada entrega </p>
+               </div>
+            </div>
+<form action="cadastro_entregas.php" method="post">
+<br />
+<!-- DADOS Cliente-->
+<fieldset>
+ <legend style="color: white;font-size: 36px"> <b>Dados Cliente</b> </legend>
+ <table cellspacing="10">
+  <tr>
+   <td>
+    <label for="nome"> <h2 style="color: #ffffff;"><b>Nome:</b></h2></label>
+   </td>
+   <td align="left">
+    <input type="text" name="email">
+   </td>
+   <td>
+    <label for="sobrenome"><h2 style="color: #ffffff;"><b>Número do Pedido:</b></h2></label>
+   </td>
+   <td align="left">
+    <input type="text" name="sobrenome">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label><h2 style="color: #ffffff;"><b>Data da Entrega:</b></h2> </label>
+   </td>
+   <td align="left">
+    <input type="text" name="ano" size="4" maxlength="4" value="ano"> 
+   <input type="text" name="mes" size="2" maxlength="2" value="mes"> 
+   <input type="text" name="dia" size="2" maxlength="2" value="dia">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="rg"><h2 style="color: #ffffff;"><b>Hora:</b></h2> </label>
+   </td>
+   <td align="left">
+    <input type="text" name="rg" size="13" maxlength="13"> 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label><h2 style="color: #ffffff;"><b>Valor:</b></h2></label>
    </td>
    <td align="left">
     <input type="text" name="valor" size="9" maxlength="9">
