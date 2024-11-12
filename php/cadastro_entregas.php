@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $entregador = $_POST['entregador'];
     $veiculo = $_POST['email'];
     $placa = $_POST['login'];
-    $ano_veiculo = $_POST['Modelo'];
+    $ano_veiculo = $_POST['Model'];
     $modelo_veiculo = $_POST['Modelo'];
 
     // Preparando a consulta SQL para inserção
