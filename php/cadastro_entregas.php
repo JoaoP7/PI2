@@ -1,6 +1,6 @@
 <?php
 // Dados de conexão com o banco de dados
-$servername = "127.0.1.1"; 
+$servername = "127.0.0.1"; 
 $username = "root"; 
 $password = "Root"; 
 $banco = "entregas"; 
@@ -12,7 +12,6 @@ $conn = new mysqli($host, $usuario, $senha, $banco);
 if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
-
 
 // Verificando se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -31,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Preparando a consulta SQL para inserção
     $sql = "INSERT INTO entregas (nome_cliente, numero_pedido, data_entrega, hora, valor, entregador, veiculo, placa, ano_veiculo, modelo_veiculo)
             VALUES ('$nome_cliente', '$numero_pedido', '$data_entrega', '$hora', '$valor', '$entregador', '$veiculo', '$placa', '$ano_veiculo', '$modelo_veiculo')";
-    
+
     // Executando a consulta
     if ($conn->query($sql) === TRUE) {
         echo "Novo registro criado com sucesso!";
@@ -42,6 +41,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Fechando a conexão
 $conn->close();
-?>
-
 ?>
