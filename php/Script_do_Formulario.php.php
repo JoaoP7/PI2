@@ -18,7 +18,7 @@ $sobrenome = $_POST['sobrenome'];
 $nascimento = $_POST['ano'] . '-' . $_POST['mes'] . '-' . $_POST['dia'];
  $rg = $_POST['rg'];
 $cpf = $_POST['cpf'] . $_POST['cpf2'];
-$rua = $_POST['rua'];
+$rua = $_PoST['rua'];
 $numero = $_POST['numero'];
 $bairro = $_POST['bairro'];
 $estado = $_POST['estado'];
@@ -27,7 +27,7 @@ $cep = $_POST['cep'] . $_POST['cep2'];
 $veiculo = $_POST['veiculo'];
 $placa = $_POST['placa'];
 $ano_veiculo = $_POST['ano_veiculo'];
-// Processando o upload de imagem
+// Processando o uploa de imagem
 if ($_FILES['imagem']['name']) {
     $imagem_nome = $_FILES['imagem']['name'];
     $imagem_tmp = $_FILES['imagem']['tmp_name'];
