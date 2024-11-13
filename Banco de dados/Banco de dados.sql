@@ -2,7 +2,7 @@
 CREATE DATABASE IF NOT EXISTS cadastros;
 
 -- Selecionando o banco de dados
-USE ecadastros;
+USE cadastros;
 
 -- Criação da tabela para armazenar os dados do formulário
 CREATE TABLE IF NOT EXISTS entregadores (
